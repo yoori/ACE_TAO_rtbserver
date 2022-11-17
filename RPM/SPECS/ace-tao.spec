@@ -3,12 +3,12 @@
 Summary:        The ADAPTIVE Communication Environment (ACE) and The ACE ORB (TAO)
 Name:           ace-tao%{?_with_valgrind:-valgrind}
 Conflicts:      ace-tao%{?!_with_valgrind:-valgrind}
-Version:        6.2.1.12
-Release:        1%{?dist}
+Version:        %{_version}
+Release:        %{_release}%{?dist}
 Group:          Development/Libraries/C and C++
 URL:            http://www.cs.wustl.edu/~schmidt/ACE.html
 License:        DOC License
-Source0:        ace-tao-%version.tar.gz
+Source0:        ace-tao-%{version}-%{_release}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:  redhat-rpm-config elfutils 
 BuildRequires:  gcc-c++ libstdc++-devel openssl-devel zlib-devel bzip2-devel
@@ -37,7 +37,8 @@ conventional ORBs for high-performance and real-time applications.
 %package -n     ace-tao%{?_with_valgrind:-valgrind}-devel
 Conflicts:      ace-tao%{?!_with_valgrind:-valgrind}-devel
 Summary:        Header files and development components for ACE
-Version:        6.2.1.12
+Version:        %{_version}
+Release:        %{_release}%{?dist}
 Group:          Development/Libraries/C and C++
 Requires:       ace-tao%{?_with_valgrind:-valgrind} = %{version}
 Requires:       openssl-devel
