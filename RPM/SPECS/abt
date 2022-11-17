@@ -1,0 +1,5 @@
+
+pkgName='ace-tao'
+specFile='ace-tao.spec'
+vcsModules[$vcsModule]=$modBuild
+rpmMacros=('' "-D '_with_valgrind 1'")
