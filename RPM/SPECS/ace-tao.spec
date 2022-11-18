@@ -43,6 +43,9 @@ Group:          Development/Libraries/C and C++
 Requires:       ace-tao%{?_with_valgrind:-valgrind} = %{version}
 Requires:       openssl-devel
 Provides:       ace-tao-devel = %{version}
+Provides: pkgconfig(ACE_MonitorControl)
+Provides: pkgconfig(TAO_ETCL_Parser)
+Provides: pkgconfig(TAO_PortableServer_Skel)
 
 %description -n ace-tao%{?_with_valgrind:-valgrind}-devel
 This package contains the components needed for developing programs
